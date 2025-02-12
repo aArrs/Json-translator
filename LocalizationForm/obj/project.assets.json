@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
+      "GTranslate/2.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/GTranslate.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/GTranslate.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
@@ -18,6 +31,25 @@
     }
   },
   "libraries": {
+    "GTranslate/2.2.8": {
+      "sha512": "3ZrbcoAvE+xthllV1/8gPDg+VtHQ/IL7v/pQmx0nfL0sgk2I8pyq43YuQT/iN8xd0Y+i8N6fAPDKKUalzUvqyQ==",
+      "type": "package",
+      "path": "gtranslate/2.2.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gtranslate.2.2.8.nupkg.sha512",
+        "gtranslate.nuspec",
+        "lib/net6.0/GTranslate.dll",
+        "lib/net6.0/GTranslate.xml",
+        "lib/net8.0/GTranslate.dll",
+        "lib/net8.0/GTranslate.xml",
+        "lib/netstandard2.0/GTranslate.dll",
+        "lib/netstandard2.0/GTranslate.xml",
+        "lib/netstandard2.1/GTranslate.dll",
+        "lib/netstandard2.1/GTranslate.xml"
+      ]
+    },
     "Newtonsoft.Json/13.0.3": {
       "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "type": "package",
@@ -51,6 +83,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "GTranslate >= 2.2.8",
       "Newtonsoft.Json >= 13.0.3"
     ]
   },
@@ -105,6 +138,10 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "GTranslate": {
+            "target": "Package",
+            "version": "[2.2.8, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"

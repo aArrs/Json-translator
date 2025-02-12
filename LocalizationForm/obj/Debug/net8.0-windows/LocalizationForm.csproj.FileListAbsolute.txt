@@ -16,3 +16,4 @@ C:\C#\Repositories\Json-translator\LocalizationForm\obj\Debug\net8.0-windows\ref
 C:\C#\Repositories\Json-translator\LocalizationForm\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\C#\Repositories\Json-translator\LocalizationForm\obj\Debug\net8.0-windows\LocalizationForm.csproj.AssemblyReference.cache
 C:\C#\Repositories\Json-translator\LocalizationForm\obj\Debug\net8.0-windows\Localiza.16A6F8A3.Up2Date
+C:\C#\Repositories\Json-translator\LocalizationForm\bin\Debug\net8.0-windows\GTranslate.dll

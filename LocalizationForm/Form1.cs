@@ -1,14 +1,18 @@
 using LocalizationForm.Interfaces;
+using GTranslate.Translators;
 
 namespace LocalizationForm
 {
     public partial class Form1 : Form
     {
+        GoogleTranslator _translator = new GoogleTranslator();
+        
         private readonly IGetFileText _getFileText = new GetFileText();
         private readonly ICastJObject _castJObject = new CastJObject();
         private readonly ICreateDictionary _createDictionary = new DictionaryCreator();
+        private readonly ITranslate _translate = new JsonTranslator();
         
-        Dictionary<string, string> sourceStrings = new Dictionary<string, string>();
+        Dictionary<string, string> _sourceStrings = new Dictionary<string, string>();
 
         public Form1()
         {
@@ -20,13 +24,15 @@ namespace LocalizationForm
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             richTextBox1.Text = _getFileText.GetText();
             
-            sourceStrings = _createDictionary.CreateDictionary(sourceStrings, _castJObject.GetJObject(richTextBox1.Text));
+            _sourceStrings = _createDictionary.CreateDictionary(_sourceStrings, _castJObject.GetJObject(richTextBox1.Text));
             
-            foreach (var prop in sourceStrings)
+            var translated = await _translate.TranslateStrings(_translator, _sourceStrings);
+            
+            foreach (var prop in translated)
             {
                 Console.WriteLine(prop);
             }
