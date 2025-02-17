@@ -34,6 +34,8 @@ partial class Form1
         button2 = new System.Windows.Forms.Button();
         richTextBox2 = new System.Windows.Forms.RichTextBox();
         comboBox1 = new System.Windows.Forms.ComboBox();
+        button3 = new System.Windows.Forms.Button();
+        button4 = new System.Windows.Forms.Button();
         SuspendLayout();
         // 
         // button1
@@ -74,6 +76,7 @@ partial class Form1
         // 
         // comboBox1
         // 
+        comboBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
         comboBox1.FormattingEnabled = true;
         comboBox1.Items.AddRange(new object[] { "en", "be" });
         comboBox1.Location = new System.Drawing.Point(457, 90);
@@ -83,11 +86,33 @@ partial class Form1
         comboBox1.Text = "Language";
         comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         // 
+        // button3
+        // 
+        button3.Location = new System.Drawing.Point(780, 510);
+        button3.Name = "button3";
+        button3.Size = new System.Drawing.Size(105, 38);
+        button3.TabIndex = 6;
+        button3.Text = "Save\r\n\r\n\r\n\r\n\r\n";
+        button3.UseVisualStyleBackColor = true;
+        button3.Click += button3_Click_1;
+        // 
+        // button4
+        // 
+        button4.Location = new System.Drawing.Point(12, 510);
+        button4.Name = "button4";
+        button4.Size = new System.Drawing.Size(105, 38);
+        button4.TabIndex = 7;
+        button4.Text = "Clear";
+        button4.UseVisualStyleBackColor = true;
+        button4.Click += button4_Click;
+        // 
         // Form1
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(896, 603);
+        Controls.Add(button4);
+        Controls.Add(button3);
         Controls.Add(comboBox1);
         Controls.Add(richTextBox2);
         Controls.Add(button2);
@@ -97,6 +122,10 @@ partial class Form1
         Load += Form1_Load;
         ResumeLayout(false);
     }
+
+    private System.Windows.Forms.Button button4;
+
+    private System.Windows.Forms.Button button3;
 
     private System.Windows.Forms.ComboBox comboBox1;
 
