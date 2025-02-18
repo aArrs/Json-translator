@@ -1,6 +1,6 @@
 ﻿namespace LocalizationForm;
 
-partial class Form1
+partial class JsonTranslator
 {
     /// <summary>
     ///  Required designer variable.
@@ -52,13 +52,13 @@ partial class Form1
         // 
         richTextBox1.Location = new System.Drawing.Point(123, 46);
         richTextBox1.Name = "richTextBox1";
-        richTextBox1.Size = new System.Drawing.Size(311, 415);
+        richTextBox1.Size = new System.Drawing.Size(438, 578);
         richTextBox1.TabIndex = 1;
         richTextBox1.Text = "";
         // 
         // button2
         // 
-        button2.Location = new System.Drawing.Point(457, 46);
+        button2.Location = new System.Drawing.Point(650, 46);
         button2.Name = "button2";
         button2.Size = new System.Drawing.Size(105, 38);
         button2.TabIndex = 2;
@@ -68,9 +68,9 @@ partial class Form1
         // 
         // richTextBox2
         // 
-        richTextBox2.Location = new System.Drawing.Point(574, 46);
+        richTextBox2.Location = new System.Drawing.Point(761, 46);
         richTextBox2.Name = "richTextBox2";
-        richTextBox2.Size = new System.Drawing.Size(311, 415);
+        richTextBox2.Size = new System.Drawing.Size(437, 578);
         richTextBox2.TabIndex = 3;
         richTextBox2.Text = "";
         // 
@@ -79,7 +79,7 @@ partial class Form1
         comboBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
         comboBox1.FormattingEnabled = true;
         comboBox1.Items.AddRange(new object[] { "en", "be" });
-        comboBox1.Location = new System.Drawing.Point(457, 90);
+        comboBox1.Location = new System.Drawing.Point(651, 90);
         comboBox1.Name = "comboBox1";
         comboBox1.Size = new System.Drawing.Size(104, 23);
         comboBox1.TabIndex = 5;
@@ -88,7 +88,7 @@ partial class Form1
         // 
         // button3
         // 
-        button3.Location = new System.Drawing.Point(780, 510);
+        button3.Location = new System.Drawing.Point(1093, 637);
         button3.Name = "button3";
         button3.Size = new System.Drawing.Size(105, 38);
         button3.TabIndex = 6;
@@ -98,7 +98,7 @@ partial class Form1
         // 
         // button4
         // 
-        button4.Location = new System.Drawing.Point(12, 510);
+        button4.Location = new System.Drawing.Point(12, 637);
         button4.Name = "button4";
         button4.Size = new System.Drawing.Size(105, 38);
         button4.TabIndex = 7;
@@ -106,20 +106,20 @@ partial class Form1
         button4.UseVisualStyleBackColor = true;
         button4.Click += button4_Click;
         // 
-        // Form1
+        // JsonTranslator
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(896, 603);
+        ClientSize = new System.Drawing.Size(1266, 687);
         Controls.Add(button4);
         Controls.Add(button3);
         Controls.Add(comboBox1);
-        Controls.Add(richTextBox2);
         Controls.Add(button2);
         Controls.Add(richTextBox1);
         Controls.Add(button1);
-        Text = "Form1";
-        Load += Form1_Load;
+        Controls.Add(richTextBox2);
+        Text = "Json Translator";
+        Load += JsonTranslator_Load;
         ResumeLayout(false);
     }
 

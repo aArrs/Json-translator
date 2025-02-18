@@ -1,6 +1,3 @@
-using Newtonsoft.Json.Linq;
-using System.IO;
-
 namespace LocalizationForm.Interfaces
 {
     interface IGetFileText
