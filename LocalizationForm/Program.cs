@@ -1,18 +1,32 @@
-namespace LocalizationForm;
+using LocalizationForm.Interfaces;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
-static class Program
+namespace LocalizationForm;
+class Program
 {
-    /// <summary>
-    ///  The main entry point for the application.
-    /// </summary>
+    public static IServiceProvider ServiceProvider { get; private set; }
+
     [STAThread]
     static void Main()
     {
-        // To customize application configuration such as set high DPI settings or default font,
-        // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
         Application.EnableVisualStyles();
-        Application.Run(new JsonTranslator());
         
+        var serviceCollection = new ServiceCollection();
+        ConfigureServices(serviceCollection);
+
+        ServiceProvider = serviceCollection.BuildServiceProvider();
+        Application.Run(ServiceProvider.GetRequiredService<JsonLocalizator>());
+    }
+    private static void ConfigureServices(ServiceCollection services)
+    {
+        services.AddTransient<ICastJObject, CastJObject>();
+        services.AddTransient<ICreateJson, JsonCreator>();
+        services.AddTransient<IGetFileText, GetFileText>();
+        services.AddTransient<ITranslate, JsonTranslator>();
+
+        services.AddTransient<JsonLocalizator>();
     }
 }

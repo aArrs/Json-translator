@@ -1,6 +1,6 @@
 ﻿namespace LocalizationForm;
 
-partial class JsonTranslator
+partial class JsonLocalizator
 {
     /// <summary>
     ///  Required designer variable.
@@ -29,8 +29,6 @@ partial class JsonTranslator
     /// </summary>
     private void InitializeComponent()
     {
-        this.FormBorderStyle = FormBorderStyle.Sizable;
-        
         button1 = new System.Windows.Forms.Button();
         richTextBox1 = new System.Windows.Forms.RichTextBox();
         button2 = new System.Windows.Forms.Button();
@@ -156,6 +154,7 @@ partial class JsonTranslator
         KeyPreview = true;
         StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         Text = "Json Translator";
+        TopMost = true;
         WindowState = System.Windows.Forms.FormWindowState.Minimized;
         Load += JsonTranslator_Load;
         tableLayoutPanel1.ResumeLayout(false);

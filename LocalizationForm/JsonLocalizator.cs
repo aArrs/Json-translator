@@ -3,30 +3,30 @@ using GTranslate.Translators;
 using Newtonsoft.Json.Linq;
 
 namespace LocalizationForm
-{
-    public partial class JsonTranslator : Form
+{ 
+    partial class JsonLocalizator : Form
     {
         YandexTranslator translatorYandex = new YandexTranslator();
         GoogleTranslator2 translatorGoogle = new GoogleTranslator2();
         
-        private readonly IGetFileText _getFileText = new GetFileText();
-        private readonly ICastJObject _castJObject = new CastJObject();
-        private readonly ITranslate _translate = new Interfaces.JsonTranslator();
-        private readonly ICreateJson _createJson = new JsonCreator();
+        private readonly IGetFileText _getFileText;
+        private readonly ICastJObject _castJObject;
+        private readonly ITranslate _translate;
+        private readonly ICreateJson _createJson;
         
         JObject sourceStrings = null;
-        List<JObject> sourceStringsList = null;
         private string language = null;
         string translatedStrings = null;
         
-        public JsonTranslator()
+        public JsonLocalizator(IGetFileText getFileText, ICastJObject castJObject, ITranslate translate,  ICreateJson createJson)
         {
+            _getFileText = getFileText;
+            _castJObject = castJObject;
+            _translate = translate;
+            _createJson = createJson;
             InitializeComponent();
         }
-        private void JsonTranslator_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void JsonTranslator_Load(object sender, EventArgs e) {}
         private void button1_Click(object sender, EventArgs e)
         {
             richTextBox2.Text = null;

@@ -8,7 +8,7 @@ namespace LocalizationForm.Interfaces
 
     public class GetFileText: IGetFileText
     {
-        public string fileName { get; set; }
+        public string fileName { get; set; } = null;
         
         public string GetText()
         {
@@ -28,7 +28,7 @@ namespace LocalizationForm.Interfaces
                     fileName = Path.GetFileNameWithoutExtension(openFile.FileName);
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 throw;
             }
