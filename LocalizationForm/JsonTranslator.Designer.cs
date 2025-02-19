@@ -108,8 +108,10 @@ partial class JsonTranslator
         // 
         // JsonTranslator
         // 
-        AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-        AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+        AutoScroll = true;
+        AutoSize = true;
+        AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
         ClientSize = new System.Drawing.Size(1266, 687);
         Controls.Add(button4);
         Controls.Add(button3);
@@ -118,7 +120,10 @@ partial class JsonTranslator
         Controls.Add(richTextBox1);
         Controls.Add(button1);
         Controls.Add(richTextBox2);
+        KeyPreview = true;
+        StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         Text = "Json Translator";
+        WindowState = System.Windows.Forms.FormWindowState.Maximized;
         Load += JsonTranslator_Load;
         ResumeLayout(false);
     }

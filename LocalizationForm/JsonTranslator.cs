@@ -6,8 +6,8 @@ namespace LocalizationForm
 {
     public partial class JsonTranslator : Form
     {
-        YandexTranslator translator = new YandexTranslator();
-        GoogleTranslator2 translator2 = new GoogleTranslator2();
+        YandexTranslator translatorYandex = new YandexTranslator();
+        GoogleTranslator2 translatorGoogle = new GoogleTranslator2();
         
         private readonly IGetFileText _getFileText = new GetFileText();
         private readonly ICastJObject _castJObject = new CastJObject();
@@ -41,27 +41,13 @@ namespace LocalizationForm
             {
                 if(language == "be")
                 {
-                    if ((sourceStrings.First).First.HasValues)
-                    {
-                        translatedStrings = await _translate.TranslateNestedStringsYa(translator, sourceStrings, language);
-                    }
-                    else
-                    {
-                        translatedStrings = await _translate.TranslateStringsYa(translator, sourceStrings, language);
-                    }
+                    translatedStrings = await _translate.ParseJObjectYa(translatorYandex, sourceStrings, language);
                 }
                 else
                 {
-                    if ((sourceStrings.First).First.HasValues)
-                    {
-                        translatedStrings = await _translate.TranslateNestedStringsGo(translator2, sourceStrings, language);
-                    }
-                    else
-                    {
-                        translatedStrings = await _translate.TranslateStringsGo(translator2, sourceStrings, language);
-                    }
+                    translatedStrings = await _translate.ParseJObjectGo(translatorGoogle, sourceStrings, language);
                 }
-                
+
             }
             catch (Exception ex)
             {
