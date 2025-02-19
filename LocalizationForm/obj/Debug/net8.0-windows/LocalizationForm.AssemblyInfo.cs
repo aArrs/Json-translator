@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LocalizationForm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fefbf9412ede274d11fbaddbd78228de19cbb85c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bcb5a2d285b472fbd17b0db576ea61d80f8c849")]
 [assembly: System.Reflection.AssemblyProductAttribute("LocalizationForm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LocalizationForm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -25,9 +25,7 @@ namespace LocalizationForm
         }
         private void JsonTranslator_Load(object sender, EventArgs e)
         {
-            FormBorderStyle = FormBorderStyle.Sizable;
-            WindowState = FormWindowState.Maximized;
-            TopMost = true;
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -47,7 +45,6 @@ namespace LocalizationForm
                 {
                     translatedStrings = await _translate.ParseJObjectGo(translatorGoogle, sourceStrings, language);
                 }
-
             }
             catch (Exception ex)
             {
@@ -77,7 +74,7 @@ namespace LocalizationForm
             translatedStrings = null;
             sourceStrings = null;
         }
-
+        
     }
 }
 
