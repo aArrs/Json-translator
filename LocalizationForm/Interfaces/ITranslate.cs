@@ -17,11 +17,11 @@ namespace LocalizationForm.Interfaces
             {
                 if (sourceStrings == null)
                 {
-                    throw new Exception("Please choose file to translate.");
+                    throw new Exception("Выберите файл.");
                 }
                 else if (toLanguage == null)
                 {
-                    throw new Exception("Please choose language.");
+                    throw new Exception("Выберите язык.");
                 }
                 else
                 {
@@ -63,11 +63,11 @@ namespace LocalizationForm.Interfaces
             {
                 if (sourceStrings == null)
                 {
-                    throw new Exception("Please choose file to translate.");
+                    throw new Exception("Выберите файл.");
                 }
                 else if (toLanguage == null)
                 {
-                    throw new Exception("Please choose language.");
+                    throw new Exception("Выберите язык.");
                 }
                 else
                 {

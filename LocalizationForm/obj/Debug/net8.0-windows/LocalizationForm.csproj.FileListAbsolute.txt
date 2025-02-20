@@ -52,3 +52,5 @@ C:\C#\Repositories\Json-translator\LocalizationForm\bin\Debug\net8.0-windows\Sys
 C:\C#\Repositories\Json-translator\LocalizationForm\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
 C:\C#\Repositories\Json-translator\LocalizationForm\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\C#\Repositories\Json-translator\LocalizationForm\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\C#\Repositories\Json-translator\LocalizationForm\obj\Debug\net8.0-windows\LocalizationForm.JsonLocalizator.resources
+C:\C#\Repositories\Json-translator\LocalizationForm\obj\Debug\net8.0-windows\LocalizationForm.csproj.GenerateResource.cache

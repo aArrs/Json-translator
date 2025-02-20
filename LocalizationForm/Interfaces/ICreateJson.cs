@@ -15,25 +15,25 @@ public class JsonCreator : ICreateJson
         {
             if (File.Exists(filePath))
             {
-                throw new Exception("File already exists.");
+                throw new Exception("Такой файл уже существует.");
             }
             else if (fileName == null)
             {
-                throw new Exception("Please choose file.");
+                throw new Exception("Выберите файл для перевода.");
             }
             else if (translatedStrings == null)
             {
-                throw new Exception("Please translate file first.");
+                throw new Exception("Сначала переведите файл.");
             }
             else if (toLanguage == null)
             {
-                throw new Exception("Please choose language.");
+                throw new Exception("Выберите язык.");
             }
             else
             {
                 using (File.Create(filePath)){}
                 File.WriteAllText(filePath, translatedStrings);
-                MessageBox.Show("Translated file is saved successfully");
+                MessageBox.Show("Файл успешно сохранен.");
             }
         }
         catch

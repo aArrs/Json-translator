@@ -20,7 +20,7 @@ namespace LocalizationForm.Interfaces
                 
                 if (openFile.ShowDialog() != DialogResult.OK)
                 {
-                    throw new Exception("Please choose a file.");
+                    throw new Exception("Выберите файл.");
                 }
                 else
                 {

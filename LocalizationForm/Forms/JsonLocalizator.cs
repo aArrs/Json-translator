@@ -56,8 +56,11 @@ namespace LocalizationForm
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(comboBox1.SelectedItem != null)
-            {   
-                language = comboBox1.Items[comboBox1.SelectedIndex].ToString();
+            {
+                if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "Английский")
+                    language = "en";
+                else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "Белорусский")
+                    language = "be";
             }
         }
         private void button3_Click_1(object sender, EventArgs e)
@@ -74,7 +77,6 @@ namespace LocalizationForm
             translatedStrings = null;
             sourceStrings = null;
         }
-        
     }
 }
 
