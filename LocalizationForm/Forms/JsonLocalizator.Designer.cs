@@ -42,13 +42,13 @@ partial class JsonLocalizator
         // 
         // button1
         // 
-        button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
         button1.Font = new System.Drawing.Font("Segoe UI", 10F);
-        button1.Location = new System.Drawing.Point(3, 3);
+        button1.Location = new System.Drawing.Point(3, 13);
         button1.Name = "button1";
         button1.Size = new System.Drawing.Size(120, 52);
         button1.TabIndex = 0;
-        button1.Text = "Выбрать .json файл";
+        button1.Text = "Выбрать файл";
         button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
         button1.UseVisualStyleBackColor = true;
         button1.Click += button1_Click;
@@ -56,17 +56,17 @@ partial class JsonLocalizator
         // richTextBox1
         // 
         richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        richTextBox1.Location = new System.Drawing.Point(129, 61);
+        richTextBox1.Location = new System.Drawing.Point(129, 71);
         richTextBox1.Name = "richTextBox1";
-        richTextBox1.Size = new System.Drawing.Size(500, 572);
+        richTextBox1.Size = new System.Drawing.Size(500, 543);
         richTextBox1.TabIndex = 1;
         richTextBox1.Text = "";
         // 
         // button2
         // 
-        button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
         button2.Font = new System.Drawing.Font("Segoe UI", 10F);
-        button2.Location = new System.Drawing.Point(635, 3);
+        button2.Location = new System.Drawing.Point(635, 13);
         button2.Name = "button2";
         button2.Size = new System.Drawing.Size(120, 52);
         button2.TabIndex = 2;
@@ -77,9 +77,9 @@ partial class JsonLocalizator
         // richTextBox2
         // 
         richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        richTextBox2.Location = new System.Drawing.Point(761, 61);
+        richTextBox2.Location = new System.Drawing.Point(761, 71);
         richTextBox2.Name = "richTextBox2";
-        richTextBox2.Size = new System.Drawing.Size(502, 572);
+        richTextBox2.Size = new System.Drawing.Size(502, 543);
         richTextBox2.TabIndex = 3;
         richTextBox2.Text = "";
         // 
@@ -89,7 +89,7 @@ partial class JsonLocalizator
         comboBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
         comboBox1.FormattingEnabled = true;
         comboBox1.Items.AddRange(new object[] { "Английский", "Белорусский" });
-        comboBox1.Location = new System.Drawing.Point(635, 61);
+        comboBox1.Location = new System.Drawing.Point(635, 71);
         comboBox1.Name = "comboBox1";
         comboBox1.Size = new System.Drawing.Size(120, 23);
         comboBox1.TabIndex = 5;
@@ -98,9 +98,9 @@ partial class JsonLocalizator
         // 
         // button3
         // 
-        button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
         button3.Font = new System.Drawing.Font("Segoe UI", 10F);
-        button3.Location = new System.Drawing.Point(635, 639);
+        button3.Location = new System.Drawing.Point(635, 620);
         button3.Name = "button3";
         button3.Size = new System.Drawing.Size(120, 45);
         button3.TabIndex = 6;
@@ -110,9 +110,9 @@ partial class JsonLocalizator
         // 
         // button4
         // 
-        button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
         button4.Font = new System.Drawing.Font("Segoe UI", 10F);
-        button4.Location = new System.Drawing.Point(3, 639);
+        button4.Location = new System.Drawing.Point(3, 620);
         button4.Name = "button4";
         button4.Size = new System.Drawing.Size(120, 45);
         button4.TabIndex = 7;
@@ -159,7 +159,6 @@ partial class JsonLocalizator
         KeyPreview = true;
         StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         Text = "Json Translator";
-        TopMost = false;
         WindowState = System.Windows.Forms.FormWindowState.Minimized;
         Load += JsonTranslator_Load;
         tableLayoutPanel1.ResumeLayout(false);

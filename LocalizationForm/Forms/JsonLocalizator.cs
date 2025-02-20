@@ -72,7 +72,7 @@ namespace LocalizationForm
             richTextBox1.Text = null;
             richTextBox2.Text = null;
             comboBox1.SelectedItem = null;
-            comboBox1.Text = "Language";
+            comboBox1.Text = "Язык";
             language = null;
             translatedStrings = null;
             sourceStrings = null;
