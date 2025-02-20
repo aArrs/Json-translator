@@ -19,7 +19,7 @@ class Program
 
         ServiceProvider = serviceCollection.BuildServiceProvider();
         Application.Run(ServiceProvider.GetRequiredService<JsonLocalizator>());
-    }
+    }   
     private static void ConfigureServices(ServiceCollection services)
     {
         services.AddTransient<ICastJObject, CastJObject>();

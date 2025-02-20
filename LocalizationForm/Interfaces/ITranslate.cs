@@ -5,13 +5,13 @@ namespace LocalizationForm.Interfaces
 {
     public interface ITranslate
     {
-        public Task<string> ParseJObjectGo(GoogleTranslator2 client, JObject sourceStrings, string toLanguage);
-        public Task<string> ParseJObjectYa(YandexTranslator client, JObject sourceStrings, string toLanguage);
+        public Task<string> TranslateJsonGo(GoogleTranslator2 client, JObject sourceStrings, string toLanguage);
+        public Task<string> TranslateJsonYa(YandexTranslator client, JObject sourceStrings, string toLanguage);
     }
 
     public class JsonTranslator : ITranslate
     {
-        public async Task<string> ParseJObjectGo(GoogleTranslator2 client, JObject sourceStrings, string toLanguage)
+        public async Task<string> TranslateJsonGo(GoogleTranslator2 client, JObject sourceStrings, string toLanguage)
         {
             try
             {
@@ -29,7 +29,7 @@ namespace LocalizationForm.Interfaces
                     {
                         if (property.Value.Type == JTokenType.Object)
                         {
-                            await ParseJObjectGo(client, (JObject)property.Value, toLanguage);
+                            await TranslateJsonGo(client, (JObject)property.Value, toLanguage);
                         }
                         else if (property.Value.Type == JTokenType.Array)
                         {
@@ -37,7 +37,7 @@ namespace LocalizationForm.Interfaces
                             {
                                 if (item.Type == JTokenType.Object)
                                 {
-                                    await ParseJObjectGo(client, (JObject)item, toLanguage);
+                                    await TranslateJsonGo(client, (JObject)item, toLanguage);
                                 }
                             }
                         }
@@ -57,7 +57,7 @@ namespace LocalizationForm.Interfaces
 
             return sourceStrings.ToString();
         }
-        public async Task<string> ParseJObjectYa(YandexTranslator client, JObject sourceStrings, string toLanguage)
+        public async Task<string> TranslateJsonYa(YandexTranslator client, JObject sourceStrings, string toLanguage)
         {
             try
             {
@@ -75,7 +75,7 @@ namespace LocalizationForm.Interfaces
                     {
                         if (property.Value.Type == JTokenType.Object)
                         {
-                            await ParseJObjectYa(client, (JObject)property.Value, toLanguage);
+                            await TranslateJsonYa(client, (JObject)property.Value, toLanguage);
                         }
                         else if (property.Value.Type == JTokenType.Array)
                         {
@@ -83,7 +83,7 @@ namespace LocalizationForm.Interfaces
                             {
                                 if (item.Type == JTokenType.Object)
                                 {
-                                    await ParseJObjectYa(client, (JObject)item, toLanguage);
+                                    await TranslateJsonYa(client, (JObject)item, toLanguage);
                                 }
                             }
                         }

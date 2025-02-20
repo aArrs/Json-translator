@@ -39,11 +39,11 @@ namespace LocalizationForm
             {
                 if(language == "be")
                 {
-                    translatedStrings = await _translate.ParseJObjectYa(translatorYandex, sourceStrings, language);
+                    translatedStrings = await _translate.TranslateJsonYa(translatorYandex, sourceStrings, language);
                 }
                 else
                 {
-                    translatedStrings = await _translate.ParseJObjectGo(translatorGoogle, sourceStrings, language);
+                    translatedStrings = await _translate.TranslateJsonGo(translatorGoogle, sourceStrings, language);
                 }
             }
             catch (Exception ex)
